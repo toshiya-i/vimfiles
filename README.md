@@ -1,2 +1,2 @@
 # vimfiles
-Vim+kaoriya settings
+my settings for Vim+kaoriya

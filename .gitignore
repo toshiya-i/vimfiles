@@ -1,0 +1,9 @@
+/dein
+/tmp/backup/*
+!/tmp/backup/.gitkeep
+/tmp/swap/*
+!/tmp/swap/.gitkeep
+/tmp/undo/*
+!/tmp/*undo/.gitkeep
+/tmp/viminfo
+

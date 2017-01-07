@@ -1,0 +1,37 @@
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  set laststatus=2
+  let g:lightline = {
+    \ 'colorscheme': 'wombat'
+    \ }
+'''
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let g:NERDTreeShowBookmarks=1
+  let g:NERDTreeShowHidden=1
+'''
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
+hook_add = '''
+  nnoremap <Space>n :<C-u>NERDTreeTabsToggle<CR>
+'''
+
+# language
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+# colorscheme
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
