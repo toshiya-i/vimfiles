@@ -42,12 +42,6 @@ set softtabstop=2
 set autoindent
 set smartindent
 
-set incsearch
-set ignorecase
-set smartcase
-set hlsearch
-nnoremap <silent><Esc><Esc> :<C-u>noh<CR>
-
 set cursorline
 
 set whichwrap=b,s,h,l,<,>,[,],~

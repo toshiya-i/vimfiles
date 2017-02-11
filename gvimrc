@@ -11,4 +11,3 @@ set background=dark
 colorscheme solarized
 highlight Cursor guifg=NONE guibg=Green
 highlight CursorIM guifg=NONE guibg=Purple
-
