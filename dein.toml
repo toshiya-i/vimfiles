@@ -14,9 +14,6 @@ repo = 'bronson/vim-trailing-whitespace'
 repo = 'Yggdroot/indentLine'
 
 [[plugins]]
-repo = 'tpope/vim-fugitive.git'
-
-[[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   let g:NERDTreeShowBookmarks=1
