@@ -14,6 +14,9 @@ repo = 'bronson/vim-trailing-whitespace'
 repo = 'Yggdroot/indentLine'
 
 [[plugins]]
+repo = 'tpope/vim-fugitive.git'
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   let g:NERDTreeShowBookmarks=1
@@ -23,7 +26,23 @@ hook_add = '''
 [[plugins]]
 repo = 'jistr/vim-nerdtree-tabs'
 hook_add = '''
+  let g:nerdtree_tabs_open_on_gui_startup=0
   nnoremap <Space>n :<C-u>NERDTreeTabsToggle<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+hook_add = '''
+  nnoremap [unite] <Nop>
+  nmap <Space>u [unite]
+
+  nnoremap [unite]d :<C-u>Unite<Space>directory_mru<Space>-default-action=cd<CR>
+  nnoremap [unite]b :<C-u>Unite<Space>buffer<CR>
+  nnoremap [unite]m :<C-u>Unite<Space>file_mru<CR>
+  nnoremap [unite]r :<C-u>Unite<Space>register<CR>
 '''
 
 [[plugins]]
@@ -62,11 +81,6 @@ hook_add = '''
   noremap <silent><expr> ? incsearch#go(<SID>config_migemo({'command': '?'}))
   noremap <silent><expr> g/ incsearch#go(<SID>config_migemo({'is_stay': 1}))
 '''
-
-# language
-[[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
 
 # colorscheme
 [[plugins]]
