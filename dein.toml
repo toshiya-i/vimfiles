@@ -44,10 +44,34 @@ hook_add = '''
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
+hook_add = '''
+  " <Space>f{char} to move to {char}
+  map  <Space>f <Plug>(easymotion-bd-f)
+  nmap <Space>f <Plug>(easymotion-overwin-f)
+
+  " s{char}{char} to move to {char}{char}
+  nmap s <Plug>(easymotion-overwin-f2)
+  vmap s <Plug>(easymotion-bd-f2)
+
+  " Move to line
+  map <Space>L <Plug>(easymotion-bd-jk)
+  nmap <Space>L <Plug>(easymotion-overwin-line)
+
+  " Move to word
+  map  <Space>w <Plug>(easymotion-bd-w)
+  nmap <Space>w <Plug>(easymotion-overwin-w)
+
+  let g:EasyMotion_do_mapping = 0
+'''
 
 [[plugins]]
 repo = 'haya14busa/incsearch.vim'
 hook_add = '''
+  map /  <Plug>(incsearch-forward)
+  map ?  <Plug>(incsearch-backward)
+  map g/ <Plug>(incsearch-stay)
+
+  set hlsearch
   let g:incsearch#auto_nohlsearch = 1
   map n  <Plug>(incsearch-nohl-n)
   map N  <Plug>(incsearch-nohl-N)
@@ -74,9 +98,9 @@ hook_add = '''
     \ }), get(a:, 1, {}))
   endfunction
 
-  noremap <silent><expr> / incsearch#go(<SID>config_migemo())
-  noremap <silent><expr> ? incsearch#go(<SID>config_migemo({'command': '?'}))
-  noremap <silent><expr> g/ incsearch#go(<SID>config_migemo({'is_stay': 1}))
+  noremap <silent><expr> m/ incsearch#go(<SID>config_migemo())
+  noremap <silent><expr> m? incsearch#go(<SID>config_migemo({'command': '?'}))
+  noremap <silent><expr> mg/ incsearch#go(<SID>config_migemo({'is_stay': 1}))
 '''
 
 # colorscheme
