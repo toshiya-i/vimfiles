@@ -1,0 +1,7 @@
+set encoding=utf-8
+set rop=type:directx,renmode:5
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_jp.utf-8
+source $VIMRUNTIME/menu.vim
+
+set gfn=Myrica_M:h14:cSHIFTJIS

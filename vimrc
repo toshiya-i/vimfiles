@@ -34,15 +34,12 @@ syntax enable
 "End dein Scripts-------------------------
 
 set number
-set relativenumber
 
 set expandtab
 set shiftwidth=2
 set softtabstop=2
 set autoindent
 set smartindent
-
-set cursorline
 
 set whichwrap=b,s,h,l,<,>,[,],~
 nnoremap j gj
@@ -66,4 +63,8 @@ set directory=~/vimfiles/tmp/swap
 if has('persistent_undo')
   set undofile
   set undodir=~/vimfiles/tmp/undo
+endif
+
+if filereadable(expand('~/vimfiles/vimrc.local'))
+  source ~/vimfiles/vimrc.local
 endif

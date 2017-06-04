@@ -4,5 +4,7 @@
 /tmp/swap/*
 !/tmp/swap/.gitkeep
 /tmp/undo/*
-!/tmp/*undo/.gitkeep
+!/tmp/undo/.gitkeep
 /tmp/viminfo
+gvimrc.local
+vimrc.local
